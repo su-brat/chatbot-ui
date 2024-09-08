@@ -17,7 +17,7 @@
   max-height: 58px;
   font-size: 16px;
   font-weight: bold;
-  background-color: #002f50;
+  background-color: #0644a7;
 }
 
 .messages {
@@ -35,17 +35,18 @@
 
 .bot-message {
   float: left;
+  text-align: start;
   padding: 15px 20px;
   margin: 5px;
   border-radius: 20px 20px 20px 1px;
-  background: #00aaa5;
+  background: #0644a7;
   color: white;
   min-width: 40px;
 }
 
 .user-message {
   float: right;
-
+  text-align: start;
   padding: 15px 10px;
   margin: 10px;
   border-radius: 20px 20px 1px 20px;
@@ -71,7 +72,6 @@
   outline: none;
   padding: 16px 52px 16px 10px;
   width: 100%;
-  -webkit-appearance: none;
 }
 
 .input > form > input:focus {
@@ -84,7 +84,7 @@
   border-bottom-right-radius: 10px;
   box-shadow: none;
   cursor: pointer;
-  fill: #4a4a4a;
+  fill: #0644a7;
   opacity: 1;
   outline: none;
   padding: 14px 16px 12px 16px;
