@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 
 import BotMessage from "./components/BotMessage";
 import UserMessage from "./components/UserMessage";
@@ -47,4 +47,8 @@ function Chatbot() {
 }
 
 const rootElement = document.getElementById("root");
-ReactDOM.render(<Chatbot />, rootElement);
+ReactDOM.createRoot(rootElement).render(
+  <React.StrictMode>
+    <Chatbot />
+  </React.StrictMode>
+);
