@@ -24,8 +24,8 @@ jobs:
 
       - name: Build project
         env:
-          REACT_APP_CHATBOT_API_URL: ${{ env.CHATBOT_API_URL }}
-        run: npm run build
+          REACT_APP_CHATBOT_API_URL: ${{ vars.REACT_APP_CHATBOT_API_URL }}
+        run: echo "REACT_APP_CHATBOT_API_URL set in env is ${{ env.REACT_APP_CHATBOT_API_URL }}" && npm run build
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v3
