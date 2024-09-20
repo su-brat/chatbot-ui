@@ -1,14 +1,19 @@
 import { CHATBOT_API_URL } from "./constants";
 
+const greetMessages = ["hi", "hello"];
+
 const API = {
   GetChatbotResponse: async (message) => {
     try {
-      if (message.trim().toLowerCase() == 'hi') {
+      if (
+        greetMessages
+          .map((value) => value.toLowerCase())
+          .includes(message.trim().toLowerCase())
+      ) {
         return "Hello! How can I help you?";
       }
-      const response = await fetch(
-        `${CHATBOT_API_URL}/ask?question="${message}"`
-      );
+      const endpoint = `${CHATBOT_API_URL}/ask?question=${message}&fallback=llm`;
+      const response = await fetch(endpoint);
       const conversation = await response.json();
       return conversation["answer"] ?? "Sorry, I didn't understand";
     } catch (err) {
