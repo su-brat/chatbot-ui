@@ -32,5 +32,5 @@ jobs:
 
       - name: Build project
         env:
-          REACT_APP_CHATBOT_API_URL: ${{ env.CHATBOT_API_URL }}
+          REACT_APP_CHATBOT_API_URL: ${{ vars.REACT_APP_CHATBOT_API_URL }}
         run: npm run build
