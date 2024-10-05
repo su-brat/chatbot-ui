@@ -15,7 +15,17 @@ export default function BotMessage({ fetchMessage }) {
 
   return (
     <div className="message-container">
-      <div className="bot-message">{isLoading ? "..." : message}</div>
+      <div className="bot-message">
+        {isLoading ? (
+          <>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </>
+        ) : (
+          message
+        )}
+      </div>
     </div>
   );
 }
