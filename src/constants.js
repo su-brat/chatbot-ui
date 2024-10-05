@@ -1,1 +1,3 @@
-export const CHATBOT_API_URL = process.env.REACT_APP_CHATBOT_API_URL || "http://localhost:3000";
+export const CHATBOT_API_URL = process.env.REACT_APP_CHATBOT_API_URL ?? "http://localhost:8000";
+export const RESPONSE_CONFIDENCE_THRESHOLD =
+  process.env.REACT_APP_RESPONSE_CONFIDENCE_THRESHOLD ?? 0.3;

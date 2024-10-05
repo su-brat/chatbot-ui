@@ -4,7 +4,6 @@
   "description": "",
   "keywords": [],
   "main": "src/index.js",
-  "homepage": "https://im-no-body.github.io/chatbot-ui",
   "dependencies": {
     "react": "18.3.1",
     "react-dom": "18.3.1",
