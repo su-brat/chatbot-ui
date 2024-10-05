@@ -1,3 +1,9 @@
+html,
+body {
+  margin: 0;
+  background-color: transparent;
+}
+
 .chatbot {
   font-family: monospace;
   background: #f5f8fb;
@@ -89,7 +95,41 @@
   top: 0;
 }
 
-html, body {
-  margin: 0;
-  background-color: transparent;
+.dot {
+  width: 4px;
+  height: 4px;
+  margin: 0 3px;
+  background-color: #fff;
+  /* The color of the dots */
+  border-radius: 50%;
+  /* Makes the dots circular */
+  display: inline-block;
+  animation: bounce 1.5s infinite ease-in-out;
+}
+
+/* Animation to create the bubbling effect */
+@keyframes bounce {
+  0%,
+  60%,
+  100% {
+    transform: translateY(0);
+  }
+
+  30% {
+    transform: translateY(-5px);
+    /* Move the dot up */
+  }
+}
+
+/* Applying a delay to each dot to create the sequence effect */
+.dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.3s;
 }
